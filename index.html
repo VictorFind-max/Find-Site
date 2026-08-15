@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find — O Futuro da Contabilidade</title>
+    <title>Find — O futuro da contabilidade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,378 +13,575 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #333333;
-            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1B3A5C 50%, #0d2137 100%);
+            min-height: 100vh;
+            color: #ffffff;
         }
 
-        /* TOPO */
+        /* HEADER */
         header {
-            background-color: #1B3A5C;
-            padding: 20px 40px;
+            padding: 24px 60px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        header h1 {
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 6px;
             color: #ffffff;
-            font-size: 28px;
-            letter-spacing: 3px;
-            font-weight: 700;
         }
 
-        header p {
-            color: #a8c4e0;
-            font-size: 13px;
-            letter-spacing: 1px;
+        .logo span {
+            font-size: 11px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 1.5px;
+            margin-top: 2px;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 36px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a.btn-nav {
+            background: rgba(26, 122, 94, 0.8);
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 6px;
+            border: 1px solid rgba(26, 122, 94, 0.5);
+        }
+
+        nav a.btn-nav:hover {
+            background: rgba(26, 122, 94, 1);
         }
 
         /* HERO */
         .hero {
-            background-color: #1B3A5C;
-            color: #ffffff;
             text-align: center;
-            padding: 80px 40px;
+            padding: 120px 40px 100px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(26, 122, 94, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(26, 122, 94, 0.15);
+            border: 1px solid rgba(26, 122, 94, 0.4);
+            color: rgba(26, 200, 150, 0.9);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 32px;
+            text-transform: uppercase;
         }
 
         .hero h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.3;
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 span {
+            background: linear-gradient(135deg, #1A7A5E, #4ecba0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
             font-size: 18px;
-            color: #a8c4e0;
-            max-width: 600px;
-            margin: 0 auto 32px;
-            line-height: 1.6;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 560px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
         }
 
-        .hero a {
-            background-color: #1A7A5E;
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1A7A5E, #15634d);
             color: #ffffff;
-            padding: 14px 36px;
-            border-radius: 4px;
+            padding: 16px 40px;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: background 0.2s;
+            border: 1px solid rgba(26, 122, 94, 0.5);
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
         }
 
-        .hero a:hover {
-            background-color: #155f4a;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 122, 94, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* SEÇÕES */
-        section {
-            padding: 70px 40px;
-            max-width: 1000px;
+        .section {
+            padding: 80px 60px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        section h2 {
-            font-size: 26px;
-            color: #1B3A5C;
-            margin-bottom: 32px;
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: rgba(26, 200, 150, 0.8);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section h2 {
+            font-size: 32px;
             font-weight: 700;
-            border-left: 4px solid #1A7A5E;
-            padding-left: 16px;
+            margin-bottom: 48px;
+            letter-spacing: -0.5px;
         }
 
         /* COMO FUNCIONA */
         .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .step {
-            background-color: #F0F4F8;
-            border-radius: 8px;
-            padding: 28px 24px;
-            text-align: center;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(26, 122, 94, 0.3);
+            transform: translateY(-4px);
         }
 
         .step .numero {
-            background-color: #1B3A5C;
-            color: #ffffff;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(26, 122, 94, 0.3), rgba(26, 122, 94, 0.1));
+            border: 1px solid rgba(26, 122, 94, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
             font-weight: 700;
-            margin: 0 auto 16px;
+            color: rgba(26, 200, 150, 0.9);
+            margin-bottom: 20px;
         }
 
         .step h3 {
             font-size: 15px;
-            color: #1B3A5C;
-            margin-bottom: 8px;
-            font-weight: 700;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
 
         .step p {
             font-size: 13px;
-            color: #666666;
-            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.7;
         }
 
         /* BENEFÍCIOS */
         .beneficios {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
         .beneficio {
-            border-left: 3px solid #1A7A5E;
-            padding: 16px 20px;
-            background-color: #f9fbfd;
-            border-radius: 0 6px 6px 0;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s;
+        }
+
+        .beneficio:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(26, 122, 94, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .beneficio-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(26, 122, 94, 0.3), rgba(26, 122, 94, 0.1));
+            border: 1px solid rgba(26, 122, 94, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 16px;
         }
 
         .beneficio h3 {
             font-size: 15px;
-            color: #1B3A5C;
-            margin-bottom: 6px;
-            font-weight: 700;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffffff;
         }
 
         .beneficio p {
             font-size: 13px;
-            color: #666666;
-            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.7;
+        }
+
+        /* DIVISOR */
+        .divider-section {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin: 0 60px;
         }
 
         /* FORMULÁRIO */
         .form-section {
-            background-color: #F0F4F8;
-            padding: 70px 40px;
+            padding: 80px 60px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        .form-section h2 {
-            font-size: 26px;
-            color: #1B3A5C;
-            margin-bottom: 8px;
+        .form-container {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 56px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-container h2 {
+            font-size: 28px;
             font-weight: 700;
-            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
-        .form-section p.subtitulo {
-            text-align: center;
-            color: #666666;
+        .form-container p.subtitulo {
+            color: rgba(255, 255, 255, 0.5);
             font-size: 14px;
             margin-bottom: 40px;
+            line-height: 1.6;
         }
 
         form {
-            max-width: 600px;
-            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         form label {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
-            color: #1B3A5C;
-            margin-bottom: 4px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
             display: block;
         }
 
         form input, form select {
             width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #c8d8e8;
-            border-radius: 4px;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
             font-size: 14px;
-            color: #333333;
-            background-color: #ffffff;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
             outline: none;
-            transition: border 0.2s;
+            transition: all 0.2s;
+        }
+
+        form input::placeholder {
+            color: rgba(255, 255, 255, 0.25);
         }
 
         form input:focus, form select:focus {
-            border-color: #1B3A5C;
+            border-color: rgba(26, 122, 94, 0.6);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        form select option {
+            background: #1B3A5C;
+            color: #ffffff;
         }
 
         form button {
-            background-color: #1B3A5C;
+            background: linear-gradient(135deg, #1A7A5E, #15634d);
             color: #ffffff;
-            padding: 14px;
+            padding: 16px;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            letter-spacing: 0.5px;
-            transition: background 0.2s;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            transition: all 0.2s;
             margin-top: 8px;
         }
 
         form button:hover {
-            background-color: #152e4a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 122, 94, 0.35);
         }
 
         /* RODAPÉ */
         footer {
-            background-color: #1B3A5C;
-            color: #a8c4e0;
-            text-align: center;
-            padding: 30px 40px;
-            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer .footer-logo h3 {
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #ffffff;
+        }
+
+        footer .footer-logo span {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.3);
         }
 
         footer a {
-            color: #a8c4e0;
+            color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
         }
 
         footer a:hover {
             color: #ffffff;
         }
-
-        .divider {
-            border: none;
-            border-top: 1px solid #e0e8f0;
-            margin: 0;
-        }
     </style>
 </head>
 <body>
 
-    <!-- TOPO -->
+    <!-- HEADER -->
     <header>
-        <div>
+        <div class="logo">
             <h1>FIND</h1>
-            <p>O futuro da contabilidade</p>
+            <span>O FUTURO DA CONTABILIDADE</span>
         </div>
+        <nav>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#cadastro" class="btn-nav">Cadastrar escritório</a>
+        </nav>
     </header>
 
     <!-- HERO -->
     <div class="hero">
-        <h2>Extratos bancários automáticos<br>para seus clientes</h2>
-        <p>O Find conecta os dados financeiros dos seus clientes via Open Finance e entrega relatórios mensais prontos para a contabilidade — sem nenhum trabalho manual.</p>
-        <a href="#cadastro">Quero conhecer o Find</a>
+        <div class="hero-badge">Open Finance Brasil</div>
+        <h2>Extratos bancários automáticos<br>para sua <span>contabilidade</span></h2>
+        <p>O Find conecta os dados financeiros dos seus clientes via Open Finance e entrega relatórios mensais prontos para contabilizar — sem nenhum trabalho manual.</p>
+        <div class="hero-buttons">
+            <a href="#cadastro" class="btn-primary">Cadastrar meu escritório</a>
+            <a href="#como-funciona" class="btn-secondary">Saiba mais</a>
+        </div>
     </div>
 
     <!-- COMO FUNCIONA -->
-    <section>
+    <div class="section" id="como-funciona">
+        <p class="section-label">Processo</p>
         <h2>Como funciona</h2>
         <div class="steps">
             <div class="step">
                 <div class="numero">1</div>
                 <h3>Cadastro do escritório</h3>
-                <p>O escritório se cadastra no Find e indica seus clientes que desejam conectar.</p>
+                <p>O escritório se cadastra no Find e indica os clientes que desejam conectar.</p>
             </div>
             <div class="step">
                 <div class="numero">2</div>
                 <h3>Autorização do cliente</h3>
-                <p>O cliente recebe um link e autoriza o compartilhamento dos dados via Open Finance — processo seguro e regulado pelo Banco Central.</p>
+                <p>O cliente recebe um link e autoriza o compartilhamento via Open Finance — seguro e regulado pelo Banco Central.</p>
             </div>
             <div class="step">
                 <div class="numero">3</div>
                 <h3>Geração automática</h3>
-                <p>Todo mês o Find busca os dados bancários, gera relatórios em PDF e Excel e envia automaticamente por e-mail.</p>
+                <p>Todo mês o Find busca os dados, gera relatórios em PDF e Excel e envia automaticamente por e-mail.</p>
             </div>
             <div class="step">
                 <div class="numero">4</div>
                 <h3>Pronto para contabilizar</h3>
-                <p>A contabilidade recebe extratos, empréstimos e investimentos organizados e prontos para lançamento.</p>
+                <p>Extratos, empréstimos e investimentos organizados e prontos para lançamento contábil.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <hr class="divider">
+    <hr class="divider-section">
 
     <!-- BENEFÍCIOS -->
-    <section>
+    <div class="section" id="beneficios">
+        <p class="section-label">Vantagens</p>
         <h2>Por que o Find?</h2>
         <div class="beneficios">
             <div class="beneficio">
+                <div class="beneficio-icon">⚡</div>
                 <h3>Sem trabalho manual</h3>
                 <p>Esqueça solicitar extratos ao cliente todo mês. O Find busca e entrega tudo automaticamente.</p>
             </div>
             <div class="beneficio">
+                <div class="beneficio-icon">📄</div>
                 <h3>Relatórios profissionais</h3>
                 <p>PDFs e planilhas formatados e organizados, prontos para o lançamento contábil.</p>
             </div>
             <div class="beneficio">
+                <div class="beneficio-icon">🔒</div>
                 <h3>Seguro e regulado</h3>
-                <p>Toda conexão é feita via Open Finance Brasil, regulado pelo Banco Central, com consentimento explícito do cliente.</p>
+                <p>Toda conexão é feita via Open Finance Brasil, regulado pelo Banco Central, com consentimento explícito.</p>
             </div>
             <div class="beneficio">
-                <h3>Extratos, empréstimos e investimentos</h3>
-                <p>Todos os dados financeiros relevantes em um único relatório mensal, para cada cliente.</p>
+                <div class="beneficio-icon">📊</div>
+                <h3>Dados completos</h3>
+                <p>Extratos, empréstimos e investimentos em um único relatório mensal por cliente.</p>
             </div>
             <div class="beneficio">
+                <div class="beneficio-icon">💳</div>
                 <h3>Cobrança por uso</h3>
                 <p>Pague apenas pelas empresas conectadas. Sem mensalidade fixa, sem surpresas.</p>
             </div>
             <div class="beneficio">
+                <div class="beneficio-icon">🚀</div>
                 <h3>Fácil de adotar</h3>
-                <p>Sem instalação, sem treinamento. O escritório se cadastra e começa a receber os relatórios.</p>
+                <p>Sem instalação, sem treinamento. O escritório se cadastra e já começa a receber os relatórios.</p>
             </div>
         </div>
-    </section>
+    </div>
+
+    <hr class="divider-section">
 
     <!-- FORMULÁRIO -->
     <div class="form-section" id="cadastro">
-        <h2>Cadastre seu escritório</h2>
-        <p class="subtitulo">Preencha o formulário e entraremos em contato em breve.</p>
-        <form action="https://formspree.io/f/mdenayaw" method="POST">
-            <div>
-                <label>Nome do escritório</label>
-                <input type="text" name="escritorio" placeholder="Escritório Contábil Exemplo" required>
-            </div>
-            <div>
-                <label>CNPJ</label>
-                <input type="text" name="cnpj" placeholder="00.000.000/0001-00" required>
-            </div>
-            <div>
-                <label>Nome do responsável</label>
-                <input type="text" name="responsavel" placeholder="Nome completo" required>
-            </div>
-            <div>
-                <label>E-mail</label>
-                <input type="email" name="email" placeholder="contato@escritorio.com.br" required>
-            </div>
-            <div>
-                <label>Telefone / WhatsApp</label>
-                <input type="text" name="telefone" placeholder="(11) 99999-9999" required>
-            </div>
-            <div>
-                <label>Número aproximado de clientes que atende</label>
-                <select name="clientes">
-                    <option value="">Selecione</option>
-                    <option value="1-10">1 a 10 clientes</option>
-                    <option value="11-30">11 a 30 clientes</option>
-                    <option value="31-50">31 a 50 clientes</option>
-                    <option value="51-100">51 a 100 clientes</option>
-                    <option value="100+">Mais de 100 clientes</option>
-                </select>
-            </div>
-            <button type="submit">Enviar cadastro</button>
-        </form>
+        <div class="form-container">
+            <h2>Cadastre seu escritório</h2>
+            <p class="subtitulo">Preencha o formulário abaixo e entraremos em contato em breve para dar início à sua experiência com o Find.</p>
+            <form action="https://formspree.io/f/mdenayaw" method="POST">
+                <div>
+                    <label>Nome do escritório</label>
+                    <input type="text" name="escritorio" placeholder="Escritório Contábil Exemplo" required>
+                </div>
+                <div>
+                    <label>CNPJ</label>
+                    <input type="text" name="cnpj" placeholder="00.000.000/0001-00" required>
+                </div>
+                <div>
+                    <label>Nome do responsável</label>
+                    <input type="text" name="responsavel" placeholder="Nome completo" required>
+                </div>
+                <div>
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder="contato@escritorio.com.br" required>
+                </div>
+                <div>
+                    <label>Telefone / WhatsApp</label>
+                    <input type="text" name="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+                <div>
+                    <label>Número aproximado de clientes que atende</label>
+                    <select name="clientes">
+                        <option value="">Selecione</option>
+                        <option value="1-10">1 a 10 clientes</option>
+                        <option value="11-30">11 a 30 clientes</option>
+                        <option value="31-50">31 a 50 clientes</option>
+                        <option value="51-100">51 a 100 clientes</option>
+                        <option value="100+">Mais de 100 clientes</option>
+                    </select>
+                </div>
+                <button type="submit">Enviar cadastro</button>
+            </form>
+        </div>
     </div>
 
     <!-- RODAPÉ -->
     <footer>
+        <div class="footer-logo">
+            <h3>FIND</h3>
+            <span>O futuro da contabilidade</span>
+        </div>
         <p>© 2026 Find. Todos os direitos reservados.</p>
-        <p style="margin-top: 8px;">
-            <a href="mailto:contato@find.com">contato@find.com</a>
-        </p>
-        <p style="margin-top: 8px; font-size: 11px;">
-            Informações extraídas via Open Finance Brasil, regulado pelo Banco Central do Brasil.
-        </p>
+        <a href="mailto:contato@find.com">contato@find.com</a>
     </footer>
 
 </body>
