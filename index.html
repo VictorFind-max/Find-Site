@@ -14,9 +14,14 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a1628 0%, #1B3A5C 50%, #0d2137 100%);
+            background: linear-gradient(135deg, #080e17 0%, #0f1e2e 50%, #080e17 100%);
             min-height: 100vh;
             color: #ffffff;
+        }
+
+        /* BOOK ANTIQUA para nome e slogan */
+        .find-name {
+            font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
         }
 
         /* HEADER */
@@ -27,7 +32,7 @@
             justify-content: space-between;
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -39,24 +44,26 @@
         }
 
         .logo h1 {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 6px;
+            font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 8px;
             color: #ffffff;
         }
 
         .logo span {
-            font-size: 11px;
+            font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+            font-size: 10px;
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 2px;
             margin-top: 2px;
         }
 
         nav a {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             margin-left: 36px;
             transition: color 0.2s;
@@ -67,11 +74,11 @@
         }
 
         nav a.btn-nav {
-            background: rgba(26, 122, 94, 0.8);
+            background: rgba(26, 122, 94, 0.7);
             color: #ffffff;
             padding: 10px 24px;
             border-radius: 6px;
-            border: 1px solid rgba(26, 122, 94, 0.5);
+            border: 1px solid rgba(26, 122, 94, 0.4);
         }
 
         nav a.btn-nav:hover {
@@ -81,7 +88,7 @@
         /* HERO */
         .hero {
             text-align: center;
-            padding: 120px 40px 100px;
+            padding: 130px 40px 110px;
             position: relative;
         }
 
@@ -91,32 +98,33 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(26, 122, 94, 0.15) 0%, transparent 70%);
+            width: 700px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(26, 122, 94, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
 
         .hero-badge {
             display: inline-block;
-            background: rgba(26, 122, 94, 0.15);
-            border: 1px solid rgba(26, 122, 94, 0.4);
-            color: rgba(26, 200, 150, 0.9);
-            font-size: 12px;
+            background: rgba(26, 122, 94, 0.1);
+            border: 1px solid rgba(26, 122, 94, 0.3);
+            color: rgba(26, 200, 150, 0.8);
+            font-size: 11px;
             font-weight: 600;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             padding: 6px 18px;
             border-radius: 20px;
-            margin-bottom: 32px;
+            margin-bottom: 36px;
             text-transform: uppercase;
         }
 
         .hero h2 {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.15;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 1.18;
             margin-bottom: 24px;
             letter-spacing: -1px;
+            color: #f0f4f8;
         }
 
         .hero h2 span {
@@ -127,12 +135,12 @@
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.6);
-            max-width: 560px;
-            margin: 0 auto 48px;
-            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.45);
+            max-width: 540px;
+            margin: 0 auto 52px;
+            line-height: 1.75;
         }
 
         .hero-buttons {
@@ -144,194 +152,197 @@
         .btn-primary {
             background: linear-gradient(135deg, #1A7A5E, #15634d);
             color: #ffffff;
-            padding: 16px 40px;
+            padding: 15px 38px;
             border-radius: 8px;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
-            border: 1px solid rgba(26, 122, 94, 0.5);
-            transition: all 0.2s;
+            border: 1px solid rgba(26, 122, 94, 0.4);
+            transition: all 0.25s;
             letter-spacing: 0.3px;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 122, 94, 0.35);
+            box-shadow: 0 8px 28px rgba(26, 122, 94, 0.3);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.06);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 16px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 15px 38px;
             border-radius: 8px;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            transition: all 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.25s;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
         }
 
         /* SEÇÕES */
         .section {
-            padding: 80px 60px;
+            padding: 90px 60px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .section-label {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 600;
             letter-spacing: 3px;
-            color: rgba(26, 200, 150, 0.8);
+            color: rgba(26, 200, 150, 0.7);
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .section h2 {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 700;
-            margin-bottom: 48px;
+            margin-bottom: 52px;
             letter-spacing: -0.5px;
+            color: #f0f4f8;
         }
 
         /* COMO FUNCIONA */
         .steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 16px;
         }
 
         .step {
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 16px;
-            padding: 32px 24px;
+            padding: 32px 22px;
             transition: all 0.3s;
         }
 
         .step:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(26, 122, 94, 0.3);
+            background: rgba(255, 255, 255, 0.055);
+            border-color: rgba(26, 122, 94, 0.25);
             transform: translateY(-4px);
         }
 
         .step .numero {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, rgba(26, 122, 94, 0.3), rgba(26, 122, 94, 0.1));
-            border: 1px solid rgba(26, 122, 94, 0.4);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(26, 122, 94, 0.12);
+            border: 1px solid rgba(26, 122, 94, 0.25);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            color: rgba(26, 200, 150, 0.9);
+            color: rgba(26, 200, 150, 0.8);
             margin-bottom: 20px;
         }
 
         .step h3 {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #e8edf2;
         }
 
         .step p {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.75;
         }
 
         /* BENEFÍCIOS */
         .beneficios {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 16px;
         }
 
         .beneficio {
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 16px;
             padding: 28px;
             transition: all 0.3s;
         }
 
         .beneficio:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(26, 122, 94, 0.3);
+            background: rgba(255, 255, 255, 0.055);
+            border-color: rgba(26, 122, 94, 0.25);
             transform: translateY(-4px);
         }
 
         .beneficio-icon {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 10px;
-            background: linear-gradient(135deg, rgba(26, 122, 94, 0.3), rgba(26, 122, 94, 0.1));
-            border: 1px solid rgba(26, 122, 94, 0.3);
+            background: rgba(26, 122, 94, 0.12);
+            border: 1px solid rgba(26, 122, 94, 0.25);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 17px;
             margin-bottom: 16px;
         }
 
         .beneficio h3 {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #ffffff;
+            color: #e8edf2;
         }
 
         .beneficio p {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.75;
         }
 
         /* DIVISOR */
         .divider-section {
             border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
             margin: 0 60px;
         }
 
         /* FORMULÁRIO */
         .form-section {
-            padding: 80px 60px;
+            padding: 90px 60px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .form-container {
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
             padding: 56px;
-            max-width: 680px;
+            max-width: 660px;
             margin: 0 auto;
         }
 
         .form-container h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
+            color: #f0f4f8;
         }
 
         .form-container p.subtitulo {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
             font-size: 14px;
             margin-bottom: 40px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         form {
@@ -341,10 +352,10 @@
         }
 
         form label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.6);
-            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.8px;
             text-transform: uppercase;
             margin-bottom: 6px;
             display: block;
@@ -352,9 +363,9 @@
 
         form input, form select {
             width: 100%;
-            padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 13px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
             font-size: 14px;
             color: #ffffff;
@@ -364,42 +375,42 @@
         }
 
         form input::placeholder {
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.2);
         }
 
         form input:focus, form select:focus {
-            border-color: rgba(26, 122, 94, 0.6);
-            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(26, 122, 94, 0.5);
+            background: rgba(255, 255, 255, 0.07);
         }
 
         form select option {
-            background: #1B3A5C;
+            background: #0f1e2e;
             color: #ffffff;
         }
 
         form button {
             background: linear-gradient(135deg, #1A7A5E, #15634d);
             color: #ffffff;
-            padding: 16px;
+            padding: 15px;
             border: none;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
             letter-spacing: 0.3px;
-            transition: all 0.2s;
+            transition: all 0.25s;
             margin-top: 8px;
         }
 
         form button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 122, 94, 0.35);
+            box-shadow: 0 8px 28px rgba(26, 122, 94, 0.3);
         }
 
         /* RODAPÉ */
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
             padding: 40px 60px;
             display: flex;
             align-items: center;
@@ -407,25 +418,27 @@
         }
 
         footer .footer-logo h3 {
+            font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
             font-size: 16px;
-            font-weight: 800;
-            letter-spacing: 4px;
+            font-weight: 700;
+            letter-spacing: 5px;
             color: #ffffff;
         }
 
         footer .footer-logo span {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.4);
-            letter-spacing: 1px;
+            font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 1.5px;
         }
 
         footer p {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.25);
         }
 
         footer a {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
             text-decoration: none;
             font-size: 13px;
             transition: color 0.2s;
