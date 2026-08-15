@@ -217,7 +217,7 @@
             color: #ffffff;
         }
 
-        /* COMO FUNCIONA */
+        /* COMO FUNCIONA — cards brancos com efeito translúcido */
         .steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -225,7 +225,8 @@
         }
 
         .step {
-            background: #f5f0e8;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(27, 58, 92, 0.08);
             border-radius: 16px;
             padding: 32px 22px;
@@ -233,6 +234,7 @@
         }
 
         .step:hover {
+            background: rgba(255, 255, 255, 0.9);
             border-color: rgba(26, 122, 94, 0.2);
             transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(27, 58, 92, 0.08);
@@ -265,7 +267,7 @@
             line-height: 1.75;
         }
 
-        /* BENEFÍCIOS */
+        /* BENEFÍCIOS — cards translúcidos sobre azul */
         .beneficios {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -313,15 +315,16 @@
             line-height: 1.75;
         }
 
-        /* FORMULÁRIO */
+        /* FORMULÁRIO — card translúcido sobre branco */
         .form-container {
-            background: #ffffff;
+            background: rgba(245, 240, 232, 0.7);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(27, 58, 92, 0.1);
             border-radius: 24px;
             padding: 56px;
             max-width: 660px;
             margin: 0 auto;
-            box-shadow: 0 20px 60px rgba(27, 58, 92, 0.08);
+            box-shadow: 0 20px 60px rgba(27, 58, 92, 0.06);
         }
 
         .form-container h2 {
@@ -358,7 +361,7 @@
         form input, form select {
             width: 100%;
             padding: 13px 16px;
-            background: #f5f0e8;
+            background: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(27, 58, 92, 0.1);
             border-radius: 8px;
             font-size: 14px;
@@ -470,8 +473,8 @@
         </div>
     </div>
 
-    <!-- COMO FUNCIONA — BRANCO -->
-    <div class="section-white" id="como-funciona">
+    <!-- COMO FUNCIONA — BEGE -->
+    <div class="section-beige" id="como-funciona">
         <div class="section-inner">
             <p class="section-label">Processo</p>
             <h2>Como funciona</h2>
@@ -540,8 +543,8 @@
         </div>
     </div>
 
-    <!-- FORMULÁRIO — BEGE -->
-    <div class="section-beige" id="cadastro">
+    <!-- FORMULÁRIO — BRANCO -->
+    <div class="section-white" id="cadastro">
         <div class="section-inner">
             <div class="form-container">
                 <h2>Cadastre seu escritório</h2>
